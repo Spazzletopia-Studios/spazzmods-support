@@ -1,0 +1,118 @@
+name: Install or download problem
+description: The installer, a download, or an update will not work.
+title: "Install: "
+labels: ["install", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This form is for getting the files, not for what a module does once it
+        runs.
+
+        **If your Supporter access is not recognised, do not post your email
+        address, your Patreon receipt, or any key here.** This page is public.
+        Message Spazzletopia Studios on
+        [Patreon](https://www.patreon.com/c/SpazzletopiaStudios) instead, and
+        that gets sorted privately.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What goes wrong
+      options:
+        - "The installer will not start"
+        - "The download fails or stops partway"
+        - "The installer says I am not authorised, or asks me to sign in again"
+        - "A module I pay for is missing from the list"
+        - "The update ran, but Foundry still shows the old version"
+        - "Foundry refuses the module after it installs"
+        - "Something else"
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Which module
+      options:
+        - "All of them"
+        - "Party Armory Audit"
+        - "PF2e Battle Omen"
+        - "PF2e Earn Income"
+        - "PF2e Encounter Console"
+        - "PF2e Field & Flame"
+        - "PF2e Fling Magic"
+        - "PF2e Level-Up Assistant"
+        - "PF2e Living Shops"
+        - "PF2e Party Bestiary"
+        - "PF2e Rest Flow"
+        - "PF2e Rule Element Forge"
+        - "PF2e Rune Menu"
+        - "PF2e Spell Smoothing"
+        - "PF2e Subsystem Forge"
+        - "PF2e Ultimate Shapeshift"
+        - "PF2e Wand & Staff Casting"
+        - "SpazzMods Art Support (was Party Art)"
+        - "SpazzMods Downtime Suite"
+        - "SpazzMods Hub"
+        - "Spazzletopia Theme"
+        - "Not sure"
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: How were you installing it
+      options:
+        - "SpazzMods Installer (Windows app)"
+        - "SpazzMods Hub inside Foundry"
+        - "Foundry Install Module, manifest URL"
+        - "By hand, from a ZIP"
+    validations:
+      required: true
+  - type: input
+    id: installer-version
+    attributes:
+      label: Installer version
+      description: Shown in the installer window. Leave empty if you did not use it.
+      placeholder: "1.2.0"
+  - type: input
+    id: foundry-version
+    attributes:
+      label: Foundry VTT version
+      placeholder: "14.367"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Where Foundry runs
+      options:
+        - "Windows"
+        - "macOS"
+        - "Linux"
+        - "A hosted service, such as Forge or Molten"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: |
+        The message you saw, word for word, and what you had done just before
+        it. A screenshot of the installer window helps. Drag it into this box.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Installer log or console error
+      description: |
+        The installer keeps a log beside its own program file. For a Hub or
+        Foundry problem, press F12 and copy the red text from the Console tab.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send it
+      options:
+        - label: There is no email address, receipt, password, or key in this report.
+          required: true
