@@ -1,0 +1,62 @@
+name: Idea or request
+description: Something you want a module to do.
+title: "Idea: "
+labels: ["idea", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are read, and the good ones go on the roadmap. What problem it
+        solves at your table matters more than which button it needs.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - "Party Armory Audit"
+        - "PF2e Battle Omen"
+        - "PF2e Earn Income"
+        - "PF2e Encounter Console"
+        - "PF2e Field & Flame"
+        - "PF2e Fling Magic"
+        - "PF2e Level-Up Assistant"
+        - "PF2e Living Shops"
+        - "PF2e Party Bestiary"
+        - "PF2e Rest Flow"
+        - "PF2e Rule Element Forge"
+        - "PF2e Rune Menu"
+        - "PF2e Spell Smoothing"
+        - "PF2e Subsystem Forge"
+        - "PF2e Ultimate Shapeshift"
+        - "PF2e Wand & Staff Casting"
+        - "SpazzMods Art Support (was Party Art)"
+        - "SpazzMods Downtime Suite"
+        - "SpazzMods Hub"
+        - "Spazzletopia Theme"
+        - "SpazzMods Installer (Windows app)"
+        - "A module that does not exist yet"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is awkward today
+      description: What happens at your table now, and what it costs you.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you would like instead
+    validations:
+      required: true
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who does it help
+      options:
+        - "The GM"
+        - "The players"
+        - "Both"
+    validations:
+      required: true
