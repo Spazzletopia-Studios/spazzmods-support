@@ -1,0 +1,120 @@
+name: Bug report
+description: A SpazzMods module does something wrong.
+title: "Bug: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Two things make this fast: the versions, and the exact steps.
+
+        Please update the module first, then try again with your other modules
+        turned off. Do not post an email address, a password, or a payment
+        detail. This page is public.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - "Party Armory Audit"
+        - "PF2e Battle Omen"
+        - "PF2e Earn Income"
+        - "PF2e Encounter Console"
+        - "PF2e Field & Flame"
+        - "PF2e Fling Magic"
+        - "PF2e Level-Up Assistant"
+        - "PF2e Living Shops"
+        - "PF2e Party Bestiary"
+        - "PF2e Rest Flow"
+        - "PF2e Rule Element Forge"
+        - "PF2e Rune Menu"
+        - "PF2e Spell Smoothing"
+        - "PF2e Subsystem Forge"
+        - "PF2e Ultimate Shapeshift"
+        - "PF2e Wand & Staff Casting"
+        - "SpazzMods Art Support (was Party Art)"
+        - "SpazzMods Downtime Suite"
+        - "SpazzMods Hub"
+        - "Spazzletopia Theme"
+        - "SpazzMods Installer (Windows app)"
+        - "Something else, or not sure"
+    validations:
+      required: true
+  - type: input
+    id: module-version
+    attributes:
+      label: Module version
+      description: Foundry shows it in Manage Modules, and so does the SpazzMods Hub.
+      placeholder: "1.4.1"
+    validations:
+      required: true
+  - type: input
+    id: foundry-version
+    attributes:
+      label: Foundry VTT version
+      placeholder: "14.367"
+    validations:
+      required: true
+  - type: input
+    id: pf2e-version
+    attributes:
+      label: Pathfinder 2e system version
+      placeholder: "8.5.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: seat
+    attributes:
+      label: Who saw it
+      options:
+        - "The GM"
+        - "A player"
+        - "Both"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do
+      description: The exact steps, in order, starting from a fresh Foundry.
+      placeholder: |
+        1. Open the Field & Flame board as GM.
+        2. Start an expedition in Saltwind Coast.
+        3. Give one character the Forage role and click Roll.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Drag a screenshot straight into this box if you have one.
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console error
+      description: Press F12 in Foundry, open the Console tab, and copy the red text.
+      render: text
+  - type: textarea
+    id: other-modules
+    attributes:
+      label: Other modules needed to reproduce it
+      description: If it only happens with another module enabled, name it and its version.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send it
+      options:
+        - label: I am on the latest version of this module.
+          required: true
+        - label: It still happens with my other modules turned off, or I have named the module that brings it back.
+          required: true
+        - label: There is no password, payment detail, or personal information in this report.
+          required: true
