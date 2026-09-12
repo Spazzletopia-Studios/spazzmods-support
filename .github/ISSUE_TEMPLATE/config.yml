@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Membership, billing, or access
+    url: https://www.patreon.com/c/SpazzletopiaStudios
+    about: Anything with your payment or personal details. Message there, never in a public issue.
+  - name: Get the modules
+    url: https://github.com/Spazzletopia-Studios/spazzmods-installer/releases/latest
+    about: The SpazzMods Installer for Windows, plus every free module.
+  - name: How support works
+    url: https://github.com/Spazzletopia-Studios/spazzmods-support/blob/main/SUPPORT.md
+    about: Priorities, what happens after you post, and what makes a report easy to fix.
+  - name: Report a security problem
+    url: https://github.com/Spazzletopia-Studios/spazzmods-support/blob/main/SECURITY.md
+    about: Private reporting. Do not open a public issue for this.
