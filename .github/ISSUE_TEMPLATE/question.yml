@@ -1,0 +1,52 @@
+name: Question
+description: How to make a module do what you want.
+title: "Question: "
+labels: ["question", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask anything about how a module is meant to work. If you think it is
+        broken rather than confusing, use the bug form instead, so it gets
+        picked up sooner.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - "Party Armory Audit"
+        - "PF2e Battle Omen"
+        - "PF2e Earn Income"
+        - "PF2e Encounter Console"
+        - "PF2e Field & Flame"
+        - "PF2e Fling Magic"
+        - "PF2e Level-Up Assistant"
+        - "PF2e Living Shops"
+        - "PF2e Party Bestiary"
+        - "PF2e Rest Flow"
+        - "PF2e Rule Element Forge"
+        - "PF2e Rune Menu"
+        - "PF2e Spell Smoothing"
+        - "PF2e Subsystem Forge"
+        - "PF2e Ultimate Shapeshift"
+        - "PF2e Wand & Staff Casting"
+        - "SpazzMods Art Support (was Party Art)"
+        - "SpazzMods Downtime Suite"
+        - "SpazzMods Hub"
+        - "Spazzletopia Theme"
+        - "SpazzMods Installer (Windows app)"
+        - "The catalog as a whole, or not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What you are trying to do at your table, and where you got stuck.
+    validations:
+      required: true
+  - type: input
+    id: module-version
+    attributes:
+      label: Module version
+      placeholder: "1.4.1"
